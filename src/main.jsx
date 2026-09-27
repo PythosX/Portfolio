@@ -49,7 +49,7 @@ function Navbar() {
   useEffect(() => { const fn = () => setScrolled(window.scrollY > 24); window.addEventListener('scroll', fn, { passive: true }); return () => window.removeEventListener('scroll', fn); }, []);
   const close = () => setMenu(false);
   return <header className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
-    <a className="brand" href="#home" onClick={close}><span className="brand-mark">K<span>.</span></span><span>KARAN<span className="brand-divider"> / </span>DEVELOPER</span></a>
+    <a className="brand" href="#home" onClick={close}><span className="brand-mark">K<span>.</span></span><span>KARAN<span className="brand-divider"> / </span>PythosX</span></a>
     <nav className={menu ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
       {[['HOME','#home'],['ABOUT','#about'],['WORK','#work'],['CONTACT','#contact']].map(([label,href]) => <a key={href} href={href} onClick={close} onMouseEnter={e=>{const node=e.currentTarget;node.dataset.original=label;node.textContent=label.replaceAll('O','0').replaceAll('E','3').replaceAll('S','5').replaceAll('I','1');setTimeout(()=>{if(node.isConnected)node.textContent=node.dataset.original;},130);}}>{label}</a>)}
     </nav>
@@ -93,7 +93,8 @@ function Hero() {
     <div className="hero-copy hero-copy-left" style={{ transform: `translate3d(${pointer.x * -5}px,${pointer.y * -4}px,0)` }}>
       <p className="eyebrow"><span className="eyebrow-line"/> HEY, I’M KARAN</p>
       <h1>BUILDING<br/>DIGITAL<br/><em>WORLDS.</em></h1>
-      <p className="hero-index">01 — FULL-STACK DEVELOPER</p>
+      <p className="hero-index">01 — B.Tech Engineering Student</p>
+      <p className="hero-index">02 — At SAKEC Mumbai</p>
     </div>
     <div className="hero-portrait" onMouseEnter={() => {if(!matchMedia('(pointer: coarse)').matches)setRevealed(true);}} onClick={() => setRevealed(value=>matchMedia('(pointer: coarse)').matches?!value:true)} role="button" tabIndex={0} aria-label={revealed?'Show the alter ego':'Reveal the person behind the alter ego'} onKeyDown={e => (e.key === 'Enter'||e.key === ' ') && (e.preventDefault(),setRevealed(value=>!value))}>
       <div className="portrait-halo"/>
