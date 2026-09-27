@@ -1,6 +1,6 @@
 # Cinematic Developer Portfolio
 
-# https://portfolio-v3-nu-gray.vercel.app/
+# https://portfolio-v3-nu-gray.vercel.app
 
 A premium, cinematic developer portfolio website designed around a dark futuristic visual identity, interactive animations, and a dual-persona hero experience.
 
